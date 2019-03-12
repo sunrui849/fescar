@@ -30,7 +30,7 @@ public enum RegistryType {
      */
     File,
     /**
-     * Redis registry type.
+     * ZK registry type.
      */
     ZK,
     /**

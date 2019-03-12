@@ -51,7 +51,7 @@ public class ZKConfiguration extends AbstractConfiguration<IZkDataListener> {
     public String getConfig(String dataId, String defaultValue, long timeoutMills) {
         String path = ROOT_PATH + ZK_PATH_SPLIT_CHAR + dataId;
         String value = zkClient.readData(path);
-        if(StringUtils.isEmpty(value)) {
+        if(StringUtils.isNullOrEmpty(value)) {
             return defaultValue;
         }
 
